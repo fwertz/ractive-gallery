@@ -1,0 +1,82 @@
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+
+@mixin vertical-align( $amount: 50% ) {
+  top: $amount;
+  position: relative;
+  @include transform( translateY(-$amount) );
+}
+
+@mixin center( $amount: 50% ) {
+  position: absolute;
+  top: $amount;
+  left: $amount;
+  @include transform( translate(-$amount,-$amount) );
+}
+
+
+.r-gallery {
+  height: 100%;
+  position: relative;
+}
+
+.r-gallery-control {
+  @include vertical-align(35%);
+
+  background-color: #EFEFEF;
+  display: inline-block;
+  height: 8em;
+  opacity: 0.25;
+  position: absolute;
+  transition: opacity 0.5s ease;
+  width: 4em;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.r-gallery-control > span {
+  @include center();
+}
+
+.r-gallery-control-left {
+  border-radius: 0px 8px 8px 0px;
+}
+
+.r-gallery-control-right {
+  border-radius: 8px 0px 0px 8px;
+  right: 0;
+}
+
+
+.r-gallery-thumbnails {
+  width: 100%;
+  overflow-y: hidden;
+  overflox-x: scroll;
+  white-space: nowrap;
+
+
+}
+
+.r-gallery-thumbnail {
+  opacity: 0.25;
+  transition: all 0.5s ease;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.75;
+  }
+}
+
+.r-gallery-selected {
+  opacity: 1;
+}

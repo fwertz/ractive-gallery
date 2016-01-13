@@ -1,0 +1,40 @@
+{
+  "name": "ractive-gallery",
+  "version": "0.0.1",
+  "description": "A ractive component which encompasses the basic functionality of an image gallery",
+  "main": "ractive-gallery.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fwertz/ractive-gallery.git"
+  },
+  "keywords": [
+    "ractive",
+    "ractivejs",
+    "image",
+    "gallery",
+    "component"
+  ],
+  "author": "Francis Wertz <francis.wertz@seisan.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fwertz/ractive-gallery/issues"
+  },
+  "homepage": "https://github.com/fwertz/ractive-gallery#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.4.2",
+    "ractive": "^0.7.3",
+    "ractive-loader": "^0.5.6",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.10"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.6",
+    "ractive-image": "^0.1.2",
+    "ractive-touch": "^0.4.0"
+  }
+}

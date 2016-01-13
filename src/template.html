@@ -1,0 +1,37 @@
+<div class="r-gallery">
+    <div class="r-gallery-feature" style="height: {{ galleryHeight }}%" on-swipeleft="next" on-swiperight="prev">
+        {{#controls}}
+        <i class="r-gallery-control r-gallery-control-left" on-click="prev">
+            <span> prev </span>
+        </i>
+        {{/}}
+
+        {{#controls}}
+        <i class="r-gallery-control r-gallery-control-right" on-click="next">
+            <span> next </span>
+        </i>
+        {{/}}
+
+        <r-image
+                class="r-gallery-feature"
+                height="100%"
+                width="100%"
+                src="{{ selectedImage }}"
+        />
+    </div>
+
+
+    {{#thumbnails}}
+        <div class="r-gallery-thumbnails" style="height: {{ thumbnailsHeight }}%">
+            {{#images:i}}
+                <r-thumb
+                    class="r-gallery-thumbnail {{ i === selected ? 'r-gallery-selected' : ''}}"
+                    height="100%"
+                    idx="{{i}}"
+                    width="{{ images.length < 5 ? 25 : 20}}%"
+                    src="{{.}}"
+                />
+            {{/images}}
+        </div>
+    {{/thumbnails}}
+</div>
