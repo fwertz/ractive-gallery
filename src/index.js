@@ -32,7 +32,7 @@ var computed = {
  *
  */
 
-var RactiveImage = require( 'ractive-image' );
+var RactiveImage    = require( 'ractive-image' );
 
 module.exports = Ractive.extend({
     template:   require( './template.html' ),

@@ -28,40 +28,63 @@
 }
 
 .r-gallery-control {
-  @include vertical-align(35%);
 
-  background-color: #EFEFEF;
   display: inline-block;
-  height: 8em;
-  opacity: 0.25;
+  height: 85%;
   position: absolute;
-  transition: opacity 0.5s ease;
-  width: 4em;
+  width: 50%;
+
+
+
+  & i {
+    @include vertical-align(35%);
+
+    background-color: #EFEFEF;
+    display: inline-block;
+    height: 8em;
+    opacity: 0.25;
+    position: absolute;
+    transition: opacity 0.5s ease;
+    width: 4em;
+  }
 
   &:hover {
-    opacity: 1;
     cursor: pointer;
+
+    & i {
+      opacity: 1;
+    }
   }
 }
 
-.r-gallery-control > span {
+.r-gallery-control > i > span {
+  font-size: 2rem;
   @include center();
 }
 
 .r-gallery-control-left {
-  border-radius: 0px 8px 8px 0px;
+  left: 0;
+
+  & i {
+    border-radius: 0px 8px 8px 0px;
+  }
+
 }
 
 .r-gallery-control-right {
-  border-radius: 8px 0px 0px 8px;
   right: 0;
+
+  & i {
+    border-radius: 8px 0px 0px 8px;
+    right: 0;
+  }
+
 }
 
 
 .r-gallery-thumbnails {
   width: 100%;
   overflow-y: hidden;
-  overflox-x: scroll;
   white-space: nowrap;
 
 

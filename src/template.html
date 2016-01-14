@@ -1,21 +1,26 @@
 <div class="r-gallery">
-    <div class="r-gallery-feature" style="height: {{ galleryHeight }}%" on-swipeleft="next" on-swiperight="prev">
+    <div class="r-gallery-feature" style="height: {{ galleryHeight }}%">
         {{#controls}}
-        <i class="r-gallery-control r-gallery-control-left" on-click="prev">
-            <span> prev </span>
-        </i>
+            <div class="r-gallery-control r-gallery-control-left" on-click="prev">
+                <i>
+                    <span> {{ prevButtonLabel || '<' }} </span>
+                </i>
+            </div>
         {{/}}
 
         {{#controls}}
-        <i class="r-gallery-control r-gallery-control-right" on-click="next">
-            <span> next </span>
-        </i>
+            <div class="r-gallery-control r-gallery-control-right" on-click="next">
+                <i>
+                    <span> {{ nextButtonLabel || '>' }} </span>
+                </i>
+            </div>
         {{/}}
 
         <r-image
                 class="r-gallery-feature"
                 height="100%"
                 width="100%"
+                placeholder="//placehold.it/350x350?text=Loading"
                 src="{{ selectedImage }}"
         />
     </div>
@@ -29,6 +34,7 @@
                     height="100%"
                     idx="{{i}}"
                     width="{{ images.length < 5 ? 25 : 20}}%"
+                    placeholder="//placehold.it/150x150?text=Loading"
                     src="{{.}}"
                 />
             {{/images}}
