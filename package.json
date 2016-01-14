@@ -1,6 +1,6 @@
 {
   "name": "ractive-gallery",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A ractive component which encompasses the basic functionality of an image gallery",
   "main": "ractive-gallery.min.js",
   "scripts": {
@@ -15,7 +15,8 @@
     "ractivejs",
     "image",
     "gallery",
-    "component"
+    "component",
+    "lightbox"
   ],
   "author": "Francis Wertz <francis.wertz@seisan.com>",
   "license": "ISC",
